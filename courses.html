@@ -1,0 +1,282 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore CampusHub courses, departments, and academic programs.">
+    <title>Courses | CampusHub</title>
+</head>
+<body>
+
+    <header>
+        <h1>CampusHub</h1>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html" aria-current="page">Courses</a></li>
+                <li><a href="instructors.html">Instructors</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="courses-heading">
+            <h2 id="courses-heading">Our Courses</h2>
+
+            <p>
+                Discover your interests, develop new skills,
+                and find the right course for your future.
+            </p>
+
+            <p>
+                Explore our academic programs and choose
+                the learning path that suits your goals.
+            </p>
+        </section>
+
+        <section aria-labelledby="search-heading">
+            <h2 id="search-heading">Find Your Course</h2>
+
+            <form action="courses.html" method="get">
+                <div>
+                    <label for="course-search">Search courses</label>
+                    <input
+                        type="search"
+                        id="course-search"
+                        name="search"
+                        placeholder="Search by course name..."
+                    >
+                </div>
+
+                <div>
+                    <label for="department">Department</label>
+                    <select id="department" name="department">
+                        <option value="">All Departments</option>
+                        <option value="computing">Computing</option>
+                        <option value="business">Business</option>
+                        <option value="languages">Languages</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="design">Design</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="level">Course Level</label>
+                    <select id="level" name="level">
+                        <option value="">All Levels</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <button type="submit">Search Courses</button>
+            </form>
+        </section>
+
+        <nav aria-label="Course categories">
+            <h2>Browse Categories</h2>
+
+            <ul>
+                <li><a href="#web-development">Web Development</a></li>
+                <li><a href="#database-systems">Database Systems</a></li>
+                <li><a href="#data-structures">Data Structures</a></li>
+                <li><a href="#digital-marketing">Digital Marketing</a></li>
+                <li><a href="#graphic-design">Graphic Design</a></li>
+                <li><a href="#software-engineering">Software Engineering</a></li>
+                <li><a href="#business-management">Business Management</a></li>
+                <li><a href="#english-language">English Language</a></li>
+                <li><a href="#electrical-engineering">Electrical Engineering</a></li>
+            </ul>
+        </nav>
+
+        <section aria-labelledby="all-courses-heading">
+            <h2 id="all-courses-heading">Explore All Courses</h2>
+
+            <article id="web-development">
+                <img
+                    src="images/web-development.jpg"
+                    alt="Computer screen displaying a web development project"
+                    width="300"
+                >
+                <p>Department: Computing</p>
+                <h3>Web Development</h3>
+                <p>
+                    Learn HTML, CSS, and JavaScript to create
+                    modern and accessible websites.
+                </p>
+                <p>Level: Beginner</p>
+                <p>ECTS Credits: 6</p>
+                <a href="schedule.html">View Details</a>
+            </article>
+
+            <article id="database-systems">
+                <img
+                    src="images/database-systems.jpg"
+                    alt="Database tables and data displayed on a computer"
+                    width="300"
+                >
+                <p>Department: Computing</p>
+                <h3>Database Systems</h3>
+                <p>
+                    Learn database design, SQL queries,
+                    data organization, and information management.
+                </p>
+                <p>Level: Intermediate</p>
+                <p>ECTS Credits: 6</p>
+                <a href="schedule.html">View Details</a>
+            </article>
+
+            <article id="data-structures">
+                <img
+                    src="images/data-structures.jpg"
+                    alt="Computer science algorithms and data structures"
+                    width="300"
+                >
+                <p>Department: Computing</p>
+                <h3>Data Structures &amp; Algorithms</h3>
+                <p>
+                    Understand algorithms, arrays, lists,
+                    trees, and efficient problem-solving.
+                </p>
+                <p>Level: Advanced</p>
+                <p>ECTS Credits: 7</p>
+                <a href="schedule.html">View Details</a>
+            </article>
+
+            <article id="digital-marketing">
+                <img
+                    src="images/digital-marketing.jpg"
+                    alt="Digital marketing analytics and social media statistics"
+                    width="300"
+                >
+                <p>Department: Business</p>
+                <h3>Digital Marketing</h3>
+                <p>
+                    Explore digital campaigns, social media,
+                    online advertising, and marketing analytics.
+                </p>
+                <p>Level: Beginner</p>
+                <p>ECTS Credits: 5</p>
+                <a href="schedule.html">View Details</a>
+            </article>
+
+            <article id="graphic-design">
+                <img
+                    src="images/graphic-design.jpg"
+                    alt="Graphic design workspace with creative digital artwork"
+                    width="300"
+                >
+                <p>Department: Design</p>
+                <h3>Graphic Design</h3>
+                <p>
+                    Develop visual communication skills through
+                    typography, composition, and digital artwork.
+                </p>
+                <p>Level: Beginner</p>
+                <p>ECTS Credits: 5</p>
+                <a href="schedule.html">View Details</a>
+            </article>
+
+            <article id="software-engineering">
+                <img
+                    src="images/software-engineering.jpg"
+                    alt="Software developer working with programming code"
+                    width="300"
+                >
+                <p>Department: Computing</p>
+                <h3>Software Engineering</h3>
+                <p>
+                    Study software design, testing, development
+                    processes, and project management.
+                </p>
+                <p>Level: Advanced</p>
+                <p>ECTS Credits: 8</p>
+                <a href="schedule.html">View Details</a>
+            </article>
+
+            <article id="business-management">
+                <img
+                    src="images/business-management.jpg"
+                    alt="Business team planning a management strategy"
+                    width="300"
+                >
+                <p>Department: Business</p>
+                <h3>Business Management</h3>
+                <p>
+                    Learn leadership, business strategy,
+                    organizational planning, and decision-making.
+                </p>
+                <p>Level: Intermediate</p>
+                <p>ECTS Credits: 6</p>
+                <a href="schedule.html">View Details</a>
+            </article>
+
+            <article id="english-language">
+                <img
+                    src="images/english-language.jpg"
+                    alt="English language learning books and study materials"
+                    width="300"
+                >
+                <p>Department: Languages</p>
+                <h3>English Language</h3>
+                <p>
+                    Improve your English grammar, vocabulary,
+                    reading, writing, and communication skills.
+                </p>
+                <p>Level: Intermediate</p>
+                <p>ECTS Credits: 5</p>
+                <a href="schedule.html">View Details</a>
+            </article>
+
+            <article id="electrical-engineering">
+                <img
+                    src="images/electrical-engineering.jpg"
+                    alt="Electrical engineering equipment and electronic circuits"
+                    width="300"
+                >
+                <p>Department: Engineering</p>
+                <h3>Electrical Engineering</h3>
+                <p>
+                    Explore electrical circuits, electronic systems,
+                    and the principles of electrical engineering.
+                </p>
+                <p>Level: Advanced</p>
+                <p>ECTS Credits: 7</p>
+                <a href="schedule.html">View Details</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Contact CampusHub</h2>
+
+        <address>
+            Email:
+            <a href="mailto:info@campushub.example">
+                info@campushub.example
+            </a>
+            <br>
+            Phone:
+            <a href="tel:+10000000000">+1 000 000 0000</a>
+        </address>
+
+        <nav aria-label="Footer navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="instructors.html">Instructors</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+            </ul>
+        </nav>
+
+        <p>&copy; 2026 CampusHub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

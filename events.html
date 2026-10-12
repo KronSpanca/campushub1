@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover upcoming events at CampusHub University.">
+  <title>Events | CampusHub University</title>
+</head>
+<body>
+  <header>
+    <h1>CampusHub University</h1>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="instructors.html">Instructors</a></li>
+        <li><a href="events.html" aria-current="page">Events</a></li>
+        <li><a href="announcements.html">Announcements</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="events-heading">
+      <h2 id="events-heading">Events</h2>
+      <p>
+        Discover university events, workshops, lectures, and networking
+        opportunities at CampusHub. Join our community and expand your
+        knowledge, skills, and professional connections.
+      </p>
+    </section>
+
+    <section aria-labelledby="search-heading">
+      <h2 id="search-heading">Find an Event</h2>
+
+      <form action="events.html" method="get">
+        <div>
+          <label for="event-search">Search events</label>
+          <input
+            type="search"
+            id="event-search"
+            name="search"
+            placeholder="Search by event name or keyword">
+        </div>
+
+        <div>
+          <label for="event-category">Select category</label>
+          <select id="event-category" name="category">
+            <option value="">All Categories</option>
+            <option value="guest-lecture">Guest Lectures</option>
+            <option value="workshop">Workshops</option>
+            <option value="career">Career Events</option>
+            <option value="seminar">Seminars</option>
+          </select>
+        </div>
+
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <nav aria-label="Event categories">
+      <h2>Browse Categories</h2>
+      <ul>
+        <li><a href="events.html?category=guest-lecture">Guest Lectures</a></li>
+        <li><a href="events.html?category=workshop">Workshops</a></li>
+        <li><a href="events.html?category=career">Career Events</a></li>
+        <li><a href="events.html?category=seminar">Seminars</a></li>
+      </ul>
+    </nav>
+
+    <section aria-labelledby="upcoming-events">
+      <h2 id="upcoming-events">Upcoming Events</h2>
+
+      <article>
+        <figure>
+          <img
+            src="images/event-1.jpg"
+            alt="Guest lecture about artificial intelligence in education"
+            width="400"
+            height="250">
+          <figcaption>Guest Lecture</figcaption>
+        </figure>
+
+        <h3>AI in Education</h3>
+        <p><strong>Date:</strong> 15 April</p>
+        <p><strong>Time:</strong> 10:00 AM – 12:00 PM</p>
+        <p><strong>Location:</strong> Main Lecture Hall</p>
+        <p>
+          Explore how artificial intelligence is transforming modern
+          education, improving learning experiences, and supporting
+          university teaching.
+        </p>
+        <p><a href="event-details.html?id=1">View Details: AI in Education</a></p>
+      </article>
+
+      <article>
+        <figure>
+          <img
+            src="images/event-2.jpg"
+            alt="Students participating in a web development workshop"
+            width="400"
+            height="250">
+          <figcaption>Workshop</figcaption>
+        </figure>
+
+        <h3>Web Development Workshop</h3>
+        <p><strong>Date:</strong> 22 April</p>
+        <p><strong>Time:</strong> 1:00 PM – 4:00 PM</p>
+        <p><strong>Location:</strong> Computer Lab 2</p>
+        <p>
+          Learn the fundamentals of building websites using semantic HTML.
+          Practice creating accessible web pages and improve your
+          web development skills.
+        </p>
+        <p><a href="event-details.html?id=2">View Details: Web Development Workshop</a></p>
+      </article>
+
+      <article>
+        <figure>
+          <img
+            src="images/event-3.jpg"
+            alt="Students and employers meeting at a university career fair"
+            width="400"
+            height="250">
+          <figcaption>Career Event</figcaption>
+        </figure>
+
+        <h3>Career Fair 2025</h3>
+        <p><strong>Date:</strong> 30 April</p>
+        <p><strong>Time:</strong> 9:00 AM – 3:00 PM</p>
+        <p><strong>Location:</strong> University Conference Center</p>
+        <p>
+          Connect with employers, explore internship opportunities,
+          discover career paths, and develop professional connections
+          with industry representatives.
+        </p>
+        <p><a href="event-details.html?id=3">View Details: Career Fair 2025</a></p>
+      </article>
+
+      <article>
+        <figure>
+          <img
+            src="images/event-4.jpg"
+            alt="Speaker presenting digital transformation strategies at a seminar"
+            width="400"
+            height="250">
+          <figcaption>Seminar</figcaption>
+        </figure>
+
+        <h3>Digital Transformation</h3>
+        <p><strong>Date:</strong> 12 May</p>
+        <p><strong>Time:</strong> 11:00 AM – 1:00 PM</p>
+        <p><strong>Location:</strong> University Auditorium</p>
+        <p>
+          Discover how digital technologies are changing organizations,
+          business processes, and everyday life. Learn about emerging
+          trends and strategies for digital innovation.
+        </p>
+        <p><a href="event-details.html?id=4">View Details: Digital Transformation</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CampusHub University. All rights reserved.</p>
+
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="instructors.html">Instructors</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="announcements.html">Announcements</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
