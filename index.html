@@ -21,7 +21,10 @@
 <body>
 
     <header>
-        <h1>CampusHub</h1>
+   <div class="brand">
+    <img src="assets\logo\university.svg" alt="CampusHub Logo">
+    <h1>CampusHub</h1>
+</div>
 
         <nav aria-label="Main navigation">
             <ul class="link">
@@ -33,12 +36,35 @@
                      <li><a href="schedule.html">Schedule</a></li>
             </ul>
         </nav>
+
+        <div class="header-actions" aria-label="Quick actions">
+            <div class="search-wrap">
+                <button type="button" class="icon-button search-toggle" aria-label="Open search" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="11" cy="11" r="6"></circle>
+                        <line x1="16" y1="16" x2="21" y2="21"></line>
+                    </svg>
+                </button>
+
+                <form class="search-panel" role="search" aria-label="Search the site">
+                    <input type="search" name="q" placeholder="Search..." aria-label="Search" />
+                    <button type="submit" class="search-submit">Search</button>
+                </form>
+            </div>
+
+            <a href="#" class="icon-button" aria-label="Profile">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 20c1.5-3 4.2-4.5 8-4.5S18.5 17 20 20"></path>
+                </svg>
+            </a>
+        </div>
     </header>
 
     
     <main>
         <section aria-labelledby="hero-title">
-            <h2 id="hero-title">Your Campus, Your Future</h2>
+            <h2 id="hero-title">Your Campus <br> Your Future</h2>
 
 
             <p style="color: aquamarine;font-size: 25px;">
@@ -239,6 +265,28 @@
             &copy; 2026 CampusHub. All rights are not reserved.
         </p>
     </footer>
+
+    <script>
+        const searchToggle = document.querySelector('.search-toggle');
+        const searchPanel = document.querySelector('.search-panel');
+
+        if (searchToggle && searchPanel) {
+            searchToggle.addEventListener('click', () => {
+                const isOpen = searchPanel.classList.toggle('open');
+                searchToggle.setAttribute('aria-expanded', String(isOpen));
+                if (isOpen) {
+                    searchPanel.querySelector('input').focus();
+                }
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!event.target.closest('.search-wrap')) {
+                    searchPanel.classList.remove('open');
+                    searchToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
