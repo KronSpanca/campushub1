@@ -69,7 +69,7 @@
         <section id="course-filters" aria-label="Course search and filters">
             <form action="courses.html" method="get">
                 <div class="course-search-field">
-                    <label for="course-search">Search courses</label>
+                  
                     <div class="course-search-control">
                         <button type="submit" class="icon-button course-search-submit" aria-label="Search courses">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -82,13 +82,14 @@
                             id="course-search"
                             name="search"
                             placeholder="Search by course name..."
+                            aria-label="Search courses by name"
                         >
                     </div>
                 </div>
 
                 <div>
-                    <label for="department">Department</label>
-                    <select id="department" name="department">
+                 
+                    <select id="department" name="department" aria-label="Filter by department">
                         <option value="">All Departments</option>
                         <option value="computing">Computing</option>
                         <option value="business">Business</option>
@@ -99,8 +100,8 @@
                 </div>
 
                 <div>
-                    <label for="level">Course Level</label>
-                    <select id="level" name="level">
+                  
+                    <select id="level" name="level" aria-label="Filter by course level">
                         <option value="">All Levels</option>
                         <option value="beginner">Beginner</option>
                         <option value="intermediate">Intermediate</option>
@@ -109,6 +110,7 @@
                 </div>
 
             </form>
+            <p id="course-search-status" class="course-search-status" role="status" aria-live="polite" hidden></p>
         </section>
 
         <nav aria-label="Course categories">
@@ -123,10 +125,10 @@
         </nav>
 
         <section id="all-courses" aria-label="All courses">
-            <article id="web-development">
+            <article id="web-development" data-department="computing" data-level="beginner">
                 <img
-                    src="images/web-development.jpg"
-                    alt="Computer screen displaying a web development project"
+                    src="assets/images/courses/web-development.jpg"
+                    alt="Laptop showing source code for a website"
                     width="300"
                 >
                 <p>Department: Computing</p>
@@ -140,10 +142,10 @@
                 <a href="schedule.html">View Details</a>
             </article>
 
-            <article id="database-systems">
+            <article id="database-systems" data-department="computing" data-level="intermediate">
                 <img
-                    src="images/database-systems.jpg"
-                    alt="Database tables and data displayed on a computer"
+                    src="assets/images/courses/database-systems.jpg"
+                    alt="Rows of servers in a data center"
                     width="300"
                 >
                 <p>Department: Computing</p>
@@ -157,10 +159,10 @@
                 <a href="schedule.html">View Details</a>
             </article>
 
-            <article id="data-structures">
+            <article id="data-structures" data-department="computing" data-level="advanced">
                 <img
-                    src="images/data-structures.jpg"
-                    alt="Computer science algorithms and data structures"
+                    src="assets/images/courses/data-structures.jpg"
+                    alt="Close-up of computer circuitry and microchips"
                     width="300"
                 >
                 <p>Department: Computing</p>
@@ -174,10 +176,10 @@
                 <a href="schedule.html">View Details</a>
             </article>
 
-            <article id="digital-marketing">
+            <article id="digital-marketing" data-department="business" data-level="beginner">
                 <img
-                    src="images/digital-marketing.jpg"
-                    alt="Digital marketing analytics and social media statistics"
+                    src="assets/images/courses/digital-marketing.jpg"
+                    alt="Laptop showing digital marketing analytics"
                     width="300"
                 >
                 <p>Department: Business</p>
@@ -191,10 +193,10 @@
                 <a href="schedule.html">View Details</a>
             </article>
 
-            <article id="graphic-design">
+            <article id="graphic-design" data-department="design" data-level="beginner">
                 <img
-                    src="images/graphic-design.jpg"
-                    alt="Graphic design workspace with creative digital artwork"
+                    src="assets/images/courses/graphic-design.jpg"
+                    alt="Designer working with digital layouts on a laptop and phone"
                     width="300"
                 >
                 <p>Department: Design</p>
@@ -208,10 +210,10 @@
                 <a href="schedule.html">View Details</a>
             </article>
 
-            <article id="software-engineering">
+            <article id="software-engineering" data-department="computing" data-level="advanced">
                 <img
-                    src="images/software-engineering.jpg"
-                    alt="Software developer working with programming code"
+                    src="assets/images/courses/software-engineering.jpg"
+                    alt="Laptop displaying software code"
                     width="300"
                 >
                 <p>Department: Computing</p>
@@ -225,10 +227,10 @@
                 <a href="schedule.html">View Details</a>
             </article>
 
-            <article id="business-management">
+            <article id="business-management" data-department="business" data-level="intermediate">
                 <img
-                    src="images/business-management.jpg"
-                    alt="Business team planning a management strategy"
+                    src="assets/images/courses/business-management.jpg"
+                    alt="Team meeting around laptops"
                     width="300"
                 >
                 <p>Department: Business</p>
@@ -242,10 +244,10 @@
                 <a href="schedule.html">View Details</a>
             </article>
 
-            <article id="english-language">
+            <article id="english-language" data-department="languages" data-level="intermediate">
                 <img
-                    src="images/english-language.jpg"
-                    alt="English language learning books and study materials"
+                    src="assets/images/courses/english-language.jpg"
+                    alt="Hand writing notes with a pen"
                     width="300"
                 >
                 <p>Department: Languages</p>
@@ -259,10 +261,10 @@
                 <a href="schedule.html">View Details</a>
             </article>
 
-            <article id="electrical-engineering">
+            <article id="electrical-engineering" data-department="engineering" data-level="advanced">
                 <img
-                    src="images/electrical-engineering.jpg"
-                    alt="Electrical engineering equipment and electronic circuits"
+                    src="assets/images/courses/electrical-engineering.jpg"
+                    alt="Technician working on an electronic circuit board"
                     width="300"
                 >
                 <p>Department: Engineering</p>
@@ -301,7 +303,9 @@
             </ul>
         </nav>
 
-        <p>&copy; 2026 CampusHub. All rights reserved.</p>
+        <p>
+            &copy; 2026 Kron Spanca. All rights are not reserved.
+        </p>
     </footer>
 
     <script>
@@ -322,6 +326,79 @@
                     searchPanel.classList.remove('open');
                     searchToggle.setAttribute('aria-expanded', 'false');
                 }
+            });
+        }
+
+        const courseSearchForm = document.querySelector('#course-filters form');
+        const courseSearchInput = document.querySelector('#course-search');
+        const courseSearchStatus = document.querySelector('#course-search-status');
+        const courseCards = document.querySelectorAll('#all-courses article');
+        const departmentFilter = document.querySelector('#department');
+        const levelFilter = document.querySelector('#level');
+        const normalizeCourseName = (name) =>
+            name.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, ' ').trim();
+
+        const applyCourseFilters = () => {
+            const department = departmentFilter.value;
+            const level = levelFilter.value;
+            let visibleCount = 0;
+
+            courseCards.forEach((course) => {
+                const matchesDepartment = !department || course.dataset.department === department;
+                const matchesLevel = !level || course.dataset.level === level;
+                course.hidden = !matchesDepartment || !matchesLevel;
+
+                if (!course.hidden) {
+                    visibleCount += 1;
+                }
+            });
+
+            if (department || level) {
+                courseSearchStatus.hidden = false;
+                courseSearchStatus.textContent = visibleCount
+                    ? `Showing ${visibleCount} course${visibleCount === 1 ? '' : 's'}.`
+                    : 'No courses match these filters.';
+            } else {
+                courseSearchStatus.hidden = true;
+            }
+        };
+
+        if (departmentFilter && levelFilter && courseSearchStatus) {
+            departmentFilter.addEventListener('change', applyCourseFilters);
+            levelFilter.addEventListener('change', applyCourseFilters);
+        }
+
+        if (courseSearchForm && courseSearchInput && courseSearchStatus) {
+            courseSearchForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                const searchTerm = courseSearchInput.value.trim();
+                const normalizedSearchTerm = normalizeCourseName(searchTerm);
+
+                courseSearchStatus.hidden = false;
+
+                if (!normalizedSearchTerm) {
+                    courseSearchStatus.textContent = 'Enter a course name to search.';
+                    return;
+                }
+
+                const matchingCourse = Array.from(courseCards).find((course) => {
+                    const title = course.querySelector('h3').textContent;
+                    return !course.hidden && normalizeCourseName(title).includes(normalizedSearchTerm);
+                });
+
+                if (!matchingCourse) {
+                    courseSearchStatus.textContent = `No course found matching "${searchTerm}".`;
+                    return;
+                }
+
+                const title = matchingCourse.querySelector('h3').textContent.trim();
+                courseSearchStatus.textContent = `Found ${title}.`;
+                matchingCourse.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+
+            courseSearchInput.addEventListener('input', () => {
+                courseSearchStatus.hidden = true;
             });
         }
     </script>

@@ -226,12 +226,9 @@ main > section:has(#hero-title) {
     min-height: 480px;
     padding: 70px 7%;
 
-    background: linear-gradient(
-        110deg,
-        #142d4e 0%,
-        #1c4776 65%,
-        #2563a6 100%
-    );
+    background:
+        linear-gradient(110deg, rgba(20, 45, 78, 0.78), rgba(20, 45, 78, 0.48)),
+        url("assets/images/courses-campus.jpg") center / cover no-repeat;
 
     display: flex;
     align-items: center;
@@ -254,18 +251,6 @@ main > section:has(#hero-title) p {
     font-size: 19px;
     max-width: 600px;
     margin-bottom: 25px;
-}
-
-/* Hero image */
-
-main > section:has(#hero-title) img {
-    flex: 1 1 350px;
-    width: 100%;
-    max-width: 520px;
-    height: 330px;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
 /* Call-to-action button */
@@ -337,7 +322,7 @@ main > section:has(#statistics-title) li:hover {
 
 
 /* =========================================
-   5. FOUR FEATURED COURSES
+   5. FEATURED COURSES
    ========================================= */
 
 main > section:has(#courses-title) {
@@ -355,6 +340,8 @@ main > section:has(#courses-title) article {
     flex: 1 1 240px;
     min-width: 220px;
 
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     background-color: #ffffff;
 
@@ -364,6 +351,14 @@ main > section:has(#courses-title) article {
     box-shadow: 0 5px 18px rgba(20, 45, 78, 0.06);
 
     transition: 0.3s ease;
+}
+
+main > section:has(#courses-title) article > a {
+    align-self: flex-start;
+    margin-top: auto;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 main > section:has(#courses-title) article:hover {
@@ -526,6 +521,11 @@ footer address {
     line-height: 1.8;
 }
 
+footer address a {
+    color: inherit;
+    font-size: inherit;
+}
+
 footer nav ul {
     display: flex;
     flex-direction: column;
@@ -601,11 +601,6 @@ footer > p {
         flex-basis: 100%;
     }
 
-    main > section:has(#hero-title) img {
-        max-width: 100%;
-        height: 260px;
-    }
-
     main > section:has(#statistics-title) ul {
         justify-content: center;
     }
@@ -668,12 +663,16 @@ footer > p {
 
 main > section:has(#courses-heading) {
     width: 100%;
-    padding: 70px max(5%, calc((100% - 1160px) / 2));
+    min-height: 480px;
+    padding: 95px max(5%, calc((100% - 1160px) / 2));
     background:
-        linear-gradient(rgba(20, 45, 78, 0.62), rgba(20, 45, 78, 0.62)),
-        url("assets/images/OIP.webp") center / cover no-repeat;
+        linear-gradient(rgba(20, 45, 78, 0.52), rgba(20, 45, 78, 0.52)),
+        url("assets/images/courses-campus.jpg") center / cover no-repeat;
     color: #e2eaf5;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 main > section:has(#courses-heading) h2 {
@@ -698,6 +697,16 @@ main > section#course-filters form {
     border: 1px solid #e5eaf1;
     border-radius: 13px;
     box-shadow: 0 5px 18px rgba(20, 45, 78, 0.06);
+}
+
+main > section#course-filters .course-search-status {
+    margin-top: 12px;
+    color: #68758a;
+    font-size: 14px;
+}
+
+main > section#course-filters .course-search-status[hidden] {
+    display: none;
 }
 
 main > section#course-filters form > div {
@@ -821,6 +830,10 @@ main > section#all-courses article {
     transition: 0.3s ease;
 }
 
+main > section#all-courses article[hidden] {
+    display: none;
+}
+
 main > section#all-courses article:hover {
     transform: translateY(-6px);
     box-shadow: 0 14px 28px rgba(20, 45, 78, 0.13);
@@ -873,7 +886,7 @@ main > section#all-courses article > a:focus-visible {
 
 @media (max-width: 768px) {
     main > section:has(#courses-heading) {
-        padding: 55px 6%;
+        padding: 75px 6%;
     }
 
     main > section#course-filters form {
@@ -883,7 +896,7 @@ main > section#all-courses article > a:focus-visible {
 
 @media (max-width: 480px) {
     main > section:has(#courses-heading) {
-        padding: 45px 5%;
+        padding: 55px 5%;
     }
 
     main > section:has(#courses-heading) p {
