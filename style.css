@@ -147,6 +147,7 @@ header nav {
 }
 
 .icon-button svg {
+    color: white;
     width: 18px;
     height: 18px;
     stroke: currentColor;
@@ -656,6 +657,241 @@ footer > p {
     main > section:has(#courses-title) article,
     main > section:has(#events-title) article,
     main > section:has(#announcements-title) article {
+        flex-basis: 100%;
+    }
+}
+
+
+/* =========================================
+   11. COURSES PAGE
+   ========================================= */
+
+main > section:has(#courses-heading) {
+    width: 100%;
+    padding: 70px max(5%, calc((100% - 1160px) / 2));
+    background:
+        linear-gradient(rgba(20, 45, 78, 0.62), rgba(20, 45, 78, 0.62)),
+        url("assets/images/OIP.webp") center / cover no-repeat;
+    color: #e2eaf5;
+    text-align: center;
+}
+
+main > section:has(#courses-heading) h2 {
+    color: #ffffff;
+    font-size: clamp(36px, 5vw, 54px);
+    margin-bottom: 18px;
+}
+
+main > section:has(#courses-heading) p {
+    max-width: 720px;
+    margin: 0 auto 12px;
+    font-size: 18px;
+}
+
+main > section#course-filters form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 18px;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #e5eaf1;
+    border-radius: 13px;
+    box-shadow: 0 5px 18px rgba(20, 45, 78, 0.06);
+}
+
+main > section#course-filters form > div {
+    display: flex;
+    flex: 1 1 210px;
+    flex-direction: column;
+    gap: 7px;
+}
+
+main > section#course-filters .course-search-field {
+    flex: 2 1 300px;
+}
+
+main > section#course-filters label {
+    color: #142d4e;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+main > section#course-filters input,
+main > section#course-filters select {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #17243a;
+    font: inherit;
+}
+
+main > section#course-filters input:focus,
+main > section#course-filters select:focus {
+    border-color: #2563a6;
+    outline: 3px solid rgba(37, 99, 166, 0.18);
+}
+
+main > section#course-filters .course-search-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+main > section#course-filters .course-search-control input {
+    flex: 1;
+    min-width: 0;
+}
+
+main > section#course-filters .course-search-submit {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid #d6e0ec;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #142d4e;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+main > section#course-filters .course-search-submit svg {
+    color: #142d4e;
+}
+
+main > section#course-filters .course-search-submit:hover {
+    background-color: #f5f7fb;
+}
+
+main > nav[aria-label="Course categories"] {
+    width: min(1160px, 90%);
+    margin: 0 auto;
+    padding: 0 0 25px;
+}
+
+main > nav[aria-label="Course categories"] ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+}
+
+main > nav[aria-label="Course categories"] a {
+    display: inline-flex;
+    padding: 9px 15px;
+    border: 1px solid #d6e0ec;
+    border-radius: 999px;
+    background-color: #ffffff;
+    color: #142d4e;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+main > nav[aria-label="Course categories"] a[href="#all-courses"] {
+    border-color: #2563a6;
+    background-color: #2563a6;
+    color: #ffffff;
+}
+
+main > nav[aria-label="Course categories"] a:hover,
+main > nav[aria-label="Course categories"] a:focus-visible {
+    border-color: #2563a6;
+    background-color: #2563a6;
+    color: #ffffff;
+}
+
+main > section#all-courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+main > section#all-courses article {
+    flex: 1 1 300px;
+    min-width: 250px;
+    overflow: hidden;
+    border: 1px solid #e5eaf1;
+    border-radius: 13px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 18px rgba(20, 45, 78, 0.06);
+    transition: 0.3s ease;
+}
+
+main > section#all-courses article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(20, 45, 78, 0.13);
+}
+
+main > section#all-courses article img {
+    width: 100%;
+    max-width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+main > section#all-courses article > p {
+    padding: 0 20px;
+    color: #68758a;
+    font-size: 14px;
+}
+
+main > section#all-courses article > p:first-of-type {
+    padding-top: 18px;
+    color: #2563a6;
+    font-weight: 600;
+}
+
+main > section#all-courses article h3 {
+    padding: 8px 20px;
+    color: #142d4e;
+    font-size: 20px;
+}
+
+main > section#all-courses article > p:last-of-type {
+    padding-bottom: 12px;
+}
+
+main > section#all-courses article > a {
+    display: inline-flex;
+    margin: 0 20px 20px;
+    padding: 9px 15px;
+    border-radius: 7px;
+    background-color: #2563a6;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+main > section#all-courses article > a:hover,
+main > section#all-courses article > a:focus-visible {
+    background-color: #142d4e;
+}
+
+@media (max-width: 768px) {
+    main > section:has(#courses-heading) {
+        padding: 55px 6%;
+    }
+
+    main > section#course-filters form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    main > section:has(#courses-heading) {
+        padding: 45px 5%;
+    }
+
+    main > section:has(#courses-heading) p {
+        font-size: 16px;
+    }
+
+    main > section#course-filters form > div,
+    main > section#all-courses article {
         flex-basis: 100%;
     }
 }
